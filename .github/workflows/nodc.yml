@@ -40,8 +40,8 @@ jobs:
     - name: Déploiement NoDC
       run: hugo deploy --force --maxDeletes -1
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.DEUXFLEURS_ACCESS_KEY }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.DEUXFLEURS_SECRET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.NODC_ACCESS_KEY }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.NODC_SECRET }}
 
     - name: Notification Slack en cas d'échecs
       uses: rtCamp/action-slack-notify@v2
